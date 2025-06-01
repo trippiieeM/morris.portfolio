@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Morris Muchiri</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    nav a:hover { color: #3b82f6; }
+    .card:hover img { transform: scale(1.05); }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full bg-gray-800 bg-opacity-90 shadow-md z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-3">
+      <div class="text-blue-400 font-bold text-xl">Morris Muchiri</div>
+      <div class="space-x-6 text-gray-300 text-sm md:text-base">
+        <a href="index.html">About Me</a>
+        <a href="projects.html" class="text-blue-500 font-semibold">Projects</a>
+        <a href="skills.html">Skills & Experience</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html">Contact</a>
+        <a href="Resume.pdf" download class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md ml-4 font-semibold hidden md:inline-block">Resume</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-28 max-w-6xl mx-auto px-6">
+
+    <!-- Page Title -->
+    <section class="mb-12">
+      <h1 class="text-4xl font-bold text-blue-400 mb-4">My Projects</h1>
+      <p class="text-gray-300 text-lg">Here are some of the projects I've worked on in design, development, and UI/UX.</p>
+    </section>
+
+    <!-- Project Sections -->
+    <section class="space-y-16">
+
+      <!-- Graphic Design -->
+      <div>
+        <h2 class="text-2xl font-semibold mb-4 text-blue-300">Graphic Design</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="bg-gray-800 p-4 rounded-xl shadow-lg card transition-transform duration-300">
+            <img src="d2.jpeg" class="rounded-lg w-full h-40 object-cover mb-3 transition-transform duration-300" />
+            <p class="text-gray-400 text-sm">Poster Design 1</p>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-xl shadow-lg card">
+            <img src="d3.jpeg" class="rounded-lg w-full h-40 object-cover mb-3" />
+            <p class="text-gray-400 text-sm">Campaign Banner</p>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-xl shadow-lg card">
+            <img src="potrait.jpg" class="rounded-lg w-full h-40 object-cover mb-3" />
+            <p class="text-gray-400 text-sm">Social Media Poster</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Android App -->
+      <div>
+        <h2 class="text-2xl font-semibold mb-4 text-blue-300">Smart Farm Marketplace App</h2>
+        <div class="bg-gray-800 p-6 rounded-xl shadow-xl">
+          <p class="text-gray-300 mb-3">A Kotlin-based Android app with AI support to help farmers reach customers efficiently.</p>
+          <p class="text-sm text-gray-500">Tech Used: Kotlin, Firebase, AI APIs</p>
+        </div>
+      </div>
+
+      <!-- UI/UX Designs -->
+      <div>
+        <h2 class="text-2xl font-semibold mb-4 text-blue-300">UI/UX Designs</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="bg-gray-800 p-4 rounded-xl shadow-lg card">
+            <img src="ux ui.png" class="rounded-lg w-full h-40 object-cover mb-3" />
+            <p class="text-gray-400 text-sm">Mobile App Wireframe</p>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-xl shadow-lg card">
+            <img src="Dashboard.jpg" class="rounded-lg w-full h-40 object-cover mb-3" />
+            <p class="text-gray-400 text-sm">Dashboard Concept</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Web Development -->
+      <div>
+        <h2 class="text-2xl font-semibold mb-4 text-blue-300">Web Development</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl text-white mb-2">Portfolio Website</h3>
+            <p class="text-gray-400">A fully responsive portfolio site built using HTML, Tailwind CSS and JavaScript. Features multi-page layout and resume download.</p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl text-white mb-2">Farmers’ Web Portal</h3>
+            <p class="text-gray-400">A farmers’ market portal integrated with AI recommendations for produce visibility and logistics.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="text-center py-6 bg-gray-900 text-gray-600 border-t border-gray-700 mt-16">
+    © <script>document.write(new Date().getFullYear())</script> Morris Muchiri. All rights reserved.
+  </footer>
+</body>
+</html>

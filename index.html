@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Morris Muchiri | About Me</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    nav a { transition: color 0.3s ease; }
+    nav a:hover { color: #3b82f6; }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 w-full bg-gray-800 bg-opacity-90 backdrop-blur-md shadow-md z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-3">
+      <div class="text-blue-400 font-bold text-xl">Morris Muchiri</div>
+      <div class="space-x-6 text-gray-300 text-sm md:text-base">
+        <a href="index.html" class="text-blue-500 font-semibold">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills & Experience</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html">Contact</a>
+        <a href="Resume.pdf" download class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md ml-4 font-semibold hidden md:inline-block transition">Resume</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <main class="pt-28 max-w-6xl mx-auto px-6">
+    <section class="flex flex-col md:flex-row items-center justify-between bg-gray-800 rounded-2xl shadow-xl p-10 mb-16">
+      <!-- Profile Image -->
+      <div class="w-40 h-40 rounded-full overflow-hidden shadow-lg border-4 border-blue-500 mb-6 md:mb-0 md:mr-10">
+        <img src="profile.jpg" alt="Morris Muchiri" class="w-full h-full object-cover" />
+      </div>
+
+      <!-- Introduction -->
+      <div class="text-center md:text-left">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Hi, I’m Morris Muchiri</h1>
+        <p class="text-gray-300 text-lg max-w-xl">
+          A versatile software developer, creative Graphic designer, UI/UX designer, and network engineer blending creativity and logic to build stunning, functional solutions.
+        </p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-gradient-to-b from-gray-900 to-gray-800 rounded-xl shadow-lg p-8">
+      <h2 class="text-3xl font-bold mb-6 border-b-4 border-blue-500 inline-block">About Me</h2>
+      <p class="text-gray-300 leading-relaxed text-lg max-w-3xl">
+        With a passion for user-centric design and robust coding practices, I build Android apps,create stunning graphic Designs, design UI/UX interfaces, develop web apps, and configure networks. My toolkit includes Kotlin, Java, Python, HTML/CSS, SQL, Figma, and Adobe Creative Suite. Whether it’s a farmer’s market AI app or a corporate fiber network, I deliver practical, polished work.
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-gray-900 text-gray-600 border-t border-gray-700 mt-16">
+    © <script>document.write(new Date().getFullYear())</script> Morris Muchiri. All rights reserved.
+  </footer>
+
+</body>
+</html>

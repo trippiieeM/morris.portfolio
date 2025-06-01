@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Morris Muchiri</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full bg-gray-800 bg-opacity-90 shadow-md z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-3">
+      <div class="text-blue-400 font-bold text-xl">Morris Muchiri</div>
+      <div class="space-x-6 text-gray-300 text-sm md:text-base">
+        <a href="index.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html" class="text-blue-500 font-semibold">Contact</a>
+        <a href="Resume.pdf" download class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md ml-4 font-semibold hidden md:inline-block">Resume</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-28 max-w-4xl mx-auto px-6">
+    <section>
+      <h1 class="text-4xl font-bold text-blue-400 mb-6">Get In Touch</h1>
+      <p class="text-lg text-gray-300 mb-10">Whether you have a project in mind or just want to say hi, my inbox is always open.</p>
+
+      <!-- Contact Form -->
+      <form
+        action="https://formspree.io/f/xwpojojp" 
+        method="POST"
+        class="bg-gray-800 p-6 rounded-xl shadow-lg space-y-6"
+      >
+        <div>
+          <label for="name" class="block text-gray-400 mb-1">Your Name</label>
+          <input type="text" id="name" name="name" required class="w-full px-4 py-2 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label for="email" class="block text-gray-400 mb-1">Your Email</label>
+          <input type="email" id="email" name="email" required class="w-full px-4 py-2 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label for="message" class="block text-gray-400 mb-1">Message</label>
+          <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-semibold transition duration-150">
+          Send Message
+        </button>
+      </form>
+
+      <!-- Contact Details -->
+      <div class="mt-10 text-gray-400">
+        <p><strong>Email:</strong> <a href="mailto:muchirimorris007@gmail.com" class="text-blue-400">muchirimorris007@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+254792746672" class="text-blue-400">0792746672</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-6 mt-16 bg-gray-900 text-gray-600 border-t border-gray-700">
+    © <script>document.write(new Date().getFullYear())</script> Morris Muchiri. All rights reserved.
+  </footer>
+</body>
+</html>
