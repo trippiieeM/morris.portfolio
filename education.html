@@ -5,6 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Education | Morris Muchiri</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .timeline-item {
+      position: relative;
+      padding-left: 2rem;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #3b82f6;
+    }
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      left: -6px;
+      top: 0;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #3b82f6;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .education-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .education-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    .cert-badge {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(59, 130, 246, 0.1);
+      color: #3b82f6;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
 
@@ -13,44 +66,287 @@
     <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-3">
       <div class="text-blue-400 font-bold text-xl">Morris Muchiri</div>
       <div class="space-x-6 text-gray-300 text-sm md:text-base">
-        <a href="index.html">About Me</a>
-        <a href="projects.html">Projects</a>
-        <a href="skills.html">Skills</a>
+        <a href="index.html" class="hover:text-blue-400 transition-colors">About Me</a>
+        <a href="projects.html" class="hover:text-blue-400 transition-colors">Projects</a>
+        <a href="skills.html" class="hover:text-blue-400 transition-colors">Skills</a>
         <a href="education.html" class="text-blue-500 font-semibold">Education</a>
-        <a href="contact.html">Contact</a>
-        <a href="Resume.pdf" download class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md ml-4 font-semibold hidden md:inline-block">Resume</a>
+        <a href="contact.html" class="hover:text-blue-400 transition-colors">Contact</a>
+        <a href="Resume.pdf" download class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md ml-4 font-semibold hidden md:inline-block transition-colors">Resume</a>
       </div>
     </div>
   </nav>
 
-  <main class="pt-28 max-w-4xl mx-auto px-6">
-    <section>
-      <h1 class="text-4xl font-bold text-blue-400 mb-6">Education</h1>
-      <p class="text-lg text-gray-300 mb-10">Formal education and relevant certifications.</p>
+  <main class="pt-28 max-w-6xl mx-auto px-6">
+    <!-- Header Section -->
+    <section class="text-center mb-16 fade-in">
+      <h1 class="text-4xl md:text-5xl font-bold text-blue-400 mb-4">Education & Certifications</h1>
+      <p class="text-lg text-gray-300 max-w-2xl mx-auto">My academic journey and professional certifications that have shaped my technical expertise and problem-solving abilities.</p>
+    </section>
 
-      <!-- Main Degree -->
-      <div class="bg-gray-800 p-6 mb-6 rounded-xl shadow-lg">
-        <h2 class="text-xl font-semibold text-blue-300">Dedan Kimathi University of Technology</h2>
-        <p class="text-gray-400">Bachelor of Business Information Technology (BBIT)</p>
-        <p class="text-sm text-gray-500 mt-1">Focused on software development, networking, databases, and business systems.</p>
+    <!-- Education Timeline -->
+    <section class="mb-16 fade-in">
+      <h2 class="text-3xl font-bold text-blue-400 mb-8 text-center">Academic Journey</h2>
+      
+      <div class="max-w-3xl mx-auto">
+        <!-- Main Degree -->
+        <div class="timeline-item mb-12">
+          <div class="education-card bg-gray-800 p-6 rounded-xl shadow-lg border-l-4 border-blue-500 ml-4">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+              <div>
+                <h3 class="text-xl font-semibold text-white">Bachelor of Business Information Technology (BBIT)</h3>
+                <p class="text-blue-300 font-medium">Dedan Kimathi University of Technology</p>
+              </div>
+              <span class="text-gray-400 text-sm mt-2 md:mt-0">2020 - 2024</span>
+            </div>
+            <p class="text-gray-300 mb-4">Comprehensive program focusing on the intersection of business processes and information technology, with emphasis on software development, networking, databases, and business systems.</p>
+            
+            <div class="mb-4">
+              <h4 class="text-white font-medium mb-2">Key Focus Areas:</h4>
+              <div class="flex flex-wrap">
+                <span class="cert-badge"><i class="fas fa-code mr-2"></i> Software Development</span>
+                <span class="cert-badge"><i class="fas fa-database mr-2"></i> Database Systems</span>
+                <span class="cert-badge"><i class="fas fa-network-wired mr-2"></i> Computer Networks</span>
+                <span class="cert-badge"><i class="fas fa-chart-line mr-2"></i> Business Analytics</span>
+                <span class="cert-badge"><i class="fas fa-shield-alt mr-2"></i> Information Security</span>
+              </div>
+            </div>
+            
+            <div>
+              <h4 class="text-white font-medium mb-2">Notable Projects:</h4>
+              <ul class="text-gray-400 text-sm list-disc list-inside space-y-1">
+                <li>Developed a comprehensive inventory management system</li>
+                <li>Designed and implemented a campus network infrastructure proposal</li>
+                <li>Created business intelligence dashboards for data analysis</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <!-- Certifications -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-          <h3 class="text-lg font-semibold text-blue-300">Cisco Networking Course</h3>
-          <p class="text-gray-400">Learned foundational networking concepts including routing, switching, and network security.</p>
+    <!-- Certifications -->
+    <section class="mb-16 fade-in">
+      <h2 class="text-3xl font-bold text-blue-400 mb-8 text-center">Professional Certifications</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Cisco Networking -->
+        <div class="education-card bg-gray-800 p-6 rounded-xl shadow-lg border-l-4 border-green-500">
+          <div class="flex items-center mb-4">
+            <div class="bg-green-500 p-3 rounded-lg mr-4">
+              <i class="fas fa-network-wired text-white text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-white">Cisco Networking</h3>
+              <p class="text-gray-400 text-sm">Networking Fundamentals</p>
+            </div>
+          </div>
+          <p class="text-gray-300 mb-4">Comprehensive training in networking concepts including routing, switching, subnetting, and network security principles.</p>
+          <div class="flex flex-wrap mb-4">
+            <span class="cert-badge bg-green-500 bg-opacity-10 text-green-400">Routing</span>
+            <span class="cert-badge bg-green-500 bg-opacity-10 text-green-400">Switching</span>
+            <span class="cert-badge bg-green-500 bg-opacity-10 text-green-400">Network Security</span>
+          </div>
+          <div class="flex justify-between items-center text-sm text-gray-500">
+            <span>Completed</span>
+            <a href="#" class="text-blue-400 hover:text-blue-300 flex items-center">
+              View Certificate <i class="fas fa-external-link-alt ml-1 text-xs"></i>
+            </a>
+          </div>
         </div>
 
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-          <h3 class="text-lg font-semibold text-blue-300">Linux Fundamentals</h3>
-          <p class="text-gray-400">Covered Linux command line, system administration, and shell scripting essentials.</p>
+        <!-- Linux Fundamentals -->
+        <div class="education-card bg-gray-800 p-6 rounded-xl shadow-lg border-l-4 border-yellow-500">
+          <div class="flex items-center mb-4">
+            <div class="bg-yellow-500 p-3 rounded-lg mr-4">
+              <i class="fab fa-linux text-white text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-white">Linux Fundamentals</h3>
+              <p class="text-gray-400 text-sm">System Administration</p>
+            </div>
+          </div>
+          <p class="text-gray-300 mb-4">Mastered Linux command line operations, system administration tasks, shell scripting, and server management.</p>
+          <div class="flex flex-wrap mb-4">
+            <span class="cert-badge bg-yellow-500 bg-opacity-10 text-yellow-400">Command Line</span>
+            <span class="cert-badge bg-yellow-500 bg-opacity-10 text-yellow-400">Shell Scripting</span>
+            <span class="cert-badge bg-yellow-500 bg-opacity-10 text-yellow-400">System Admin</span>
+          </div>
+          <div class="flex justify-between items-center text-sm text-gray-500">
+            <span>Completed</span>
+            <a href="#" class="text-blue-400 hover:text-blue-300 flex items-center">
+              View Certificate <i class="fas fa-external-link-alt ml-1 text-xs"></i>
+            </a>
+          </div>
         </div>
 
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-          <h3 class="text-lg font-semibold text-blue-300">Internet of Things (IoT) Training</h3>
-          <p class="text-gray-400">Trained on IoT device integration, sensors, cloud connectivity, and real-time data analysis.</p>
+        <!-- IoT Training -->
+        <div class="education-card bg-gray-800 p-6 rounded-xl shadow-lg border-l-4 border-purple-500">
+          <div class="flex items-center mb-4">
+            <div class="bg-purple-500 p-3 rounded-lg mr-4">
+              <i class="fas fa-microchip text-white text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-white">Internet of Things (IoT)</h3>
+              <p class="text-gray-400 text-sm">Device Integration & Analytics</p>
+            </div>
+          </div>
+          <p class="text-gray-300 mb-4">Hands-on training in IoT device integration, sensor networks, cloud connectivity, and real-time data analysis applications.</p>
+          <div class="flex flex-wrap mb-4">
+            <span class="cert-badge bg-purple-500 bg-opacity-10 text-purple-400">Sensors</span>
+            <span class="cert-badge bg-purple-500 bg-opacity-10 text-purple-400">Cloud Integration</span>
+            <span class="cert-badge bg-purple-500 bg-opacity-10 text-purple-400">Data Analysis</span>
+          </div>
+          <div class="flex justify-between items-center text-sm text-gray-500">
+            <span>Completed</span>
+            <a href="#" class="text-blue-400 hover:text-blue-300 flex items-center">
+              View Certificate <i class="fas fa-external-link-alt ml-1 text-xs"></i>
+            </a>
+          </div>
         </div>
+
+        <!-- Additional Certification Placeholder -->
+        <div class="education-card bg-gray-800 p-6 rounded-xl shadow-lg border-l-4 border-blue-500">
+          <div class="flex items-center mb-4">
+            <div class="bg-blue-500 p-3 rounded-lg mr-4">
+              <i class="fas fa-graduation-cap text-white text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-white">Continuous Learning</h3>
+              <p class="text-gray-400 text-sm">Ongoing Professional Development</p>
+            </div>
+          </div>
+          <p class="text-gray-300 mb-4">Continuously expanding my skill set through online courses, workshops, and self-directed learning in emerging technologies.</p>
+          <div class="flex flex-wrap mb-4">
+            <span class="cert-badge bg-blue-500 bg-opacity-10 text-blue-400">Online Courses</span>
+            <span class="cert-badge bg-blue-500 bg-opacity-10 text-blue-400">Workshops</span>
+            <span class="cert-badge bg-blue-500 bg-opacity-10 text-blue-400">Self-Study</span>
+          </div>
+          <div class="flex justify-between items-center text-sm text-gray-500">
+            <span>Ongoing</span>
+            <a href="skills.html" class="text-blue-400 hover:text-blue-300 flex items-center">
+              View Skills <i class="fas fa-arrow-right ml-1 text-xs"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Gained -->
+    <section class="mb-16 fade-in">
+      <h2 class="text-3xl font-bold text-blue-400 mb-8 text-center">Skills Developed</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Technical Skills -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
+            <i class="fas fa-laptop-code text-blue-400 mr-3"></i>
+            Technical Competencies
+          </h3>
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-gray-300">Software Development</span>
+                <span class="text-blue-400 text-sm">Advanced</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2">
+                <div class="bg-blue-500 h-2 rounded-full" style="width: 85%"></div>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-gray-300">Networking & Infrastructure</span>
+                <span class="text-blue-400 text-sm">Intermediate</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2">
+                <div class="bg-green-500 h-2 rounded-full" style="width: 75%"></div>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-gray-300">Database Management</span>
+                <span class="text-blue-400 text-sm">Intermediate</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2">
+                <div class="bg-purple-500 h-2 rounded-full" style="width: 70%"></div>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-gray-300">System Administration</span>
+                <span class="text-blue-400 text-sm">Intermediate</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2">
+                <div class="bg-yellow-500 h-2 rounded-full" style="width: 65%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Business Skills -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
+            <i class="fas fa-chart-line text-green-400 mr-3"></i>
+            Business & Analytical Skills
+          </h3>
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-gray-300">Business Analysis</span>
+                <span class="text-blue-400 text-sm">Intermediate</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2">
+                <div class="bg-green-500 h-2 rounded-full" style="width: 75%"></div>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-gray-300">Project Management</span>
+                <span class="text-blue-400 text-sm">Intermediate</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2">
+                <div class="bg-blue-500 h-2 rounded-full" style="width: 70%"></div>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-gray-300">Data Analysis</span>
+                <span class="text-blue-400 text-sm">Intermediate</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2">
+                <div class="bg-purple-500 h-2 rounded-full" style="width: 65%"></div>
+              </div>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-gray-300">Technical Communication</span>
+                <span class="text-blue-400 text-sm">Advanced</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2">
+                <div class="bg-yellow-500 h-2 rounded-full" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="text-center py-12 bg-gray-800 rounded-2xl fade-in">
+      <h2 class="text-2xl font-bold text-blue-400 mb-4">Ready to Put These Skills to Work?</h2>
+      <p class="text-gray-300 mb-6 max-w-2xl mx-auto">My educational background has provided me with a strong foundation in both technical and business domains, enabling me to approach problems from multiple perspectives.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="projects.html" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors inline-block">
+          View My Projects
+        </a>
+        <a href="contact.html" class="bg-transparent border-2 border-blue-500 hover:bg-blue-500 text-white font-semibold py-3 px-8 rounded-lg transition-colors inline-block">
+          Get In Touch
+        </a>
       </div>
     </section>
   </main>
@@ -59,5 +355,39 @@
     © <script>document.write(new Date().getFullYear())</script> Morris Muchiri. All rights reserved.
   </footer>
 
+  <!-- Animation Script -->
+  <script>
+    // Fade-in animation for elements
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeElements.forEach(element => {
+      fadeObserver.observe(element);
+    });
+
+    // Animate skill bars when they come into view
+    const skillBars = document.querySelectorAll('.bg-blue-500, .bg-green-500, .bg-purple-500, .bg-yellow-500');
+    const skillObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const width = entry.target.style.width;
+          entry.target.style.width = '0';
+          setTimeout(() => {
+            entry.target.style.width = width;
+          }, 300);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    skillBars.forEach(bar => {
+      skillObserver.observe(bar);
+    });
+  </script>
 </body>
 </html>

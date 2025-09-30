@@ -5,9 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Morris Muchiri | About Me</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     nav a { transition: color 0.3s ease; }
     nav a:hover { color: #3b82f6; }
+    .floating-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .floating-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .skill-bar {
+      transition: width 1.5s ease-in-out;
+    }
+    .profile-img {
+      filter: grayscale(0.2);
+      transition: filter 0.5s ease;
+    }
+    .profile-img:hover {
+      filter: grayscale(0);
+    }
   </style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
@@ -18,10 +50,10 @@
       <div class="text-blue-400 font-bold text-xl">Morris Muchiri</div>
       <div class="space-x-6 text-gray-300 text-sm md:text-base">
         <a href="index.html" class="text-blue-500 font-semibold">About Me</a>
-        <a href="projects.html">Projects</a>
-        <a href="skills.html">Skills & Experience</a>
-        <a href="education.html">Education</a>
-        <a href="contact.html">Contact</a>
+        <a href="projects.html" class="hover:text-blue-400 transition-colors">Projects</a>
+        <a href="skills.html" class="hover:text-blue-400 transition-colors">Skills & Experience</a>
+        <a href="education.html" class="hover:text-blue-400 transition-colors">Education</a>
+        <a href="contact.html" class="hover:text-blue-400 transition-colors">Contact</a>
         <a href="Resume.pdf" download class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md ml-4 font-semibold hidden md:inline-block transition">Resume</a>
       </div>
     </div>
@@ -29,27 +61,221 @@
 
   <!-- Hero Section -->
   <main class="pt-28 max-w-6xl mx-auto px-6">
-    <section class="flex flex-col md:flex-row items-center justify-between bg-gray-800 rounded-2xl shadow-xl p-10 mb-16">
+    <section class="flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl shadow-xl p-8 md:p-10 mb-16 fade-in">
       <!-- Profile Image -->
-      <div class="w-40 h-40 rounded-full overflow-hidden shadow-lg border-4 border-blue-500 mb-6 md:mb-0 md:mr-10">
+      <div class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shadow-2xl border-4 border-blue-500 mb-6 md:mb-0 md:mr-10 transform hover:scale-105 transition duration-300 profile-img">
         <img src="profile.jpg" alt="Morris Muchiri" class="w-full h-full object-cover" />
       </div>
 
       <!-- Introduction -->
-      <div class="text-center md:text-left">
-        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Hi, I’m Morris Muchiri</h1>
-        <p class="text-gray-300 text-lg max-w-xl">
-          A versatile software developer, creative Graphic designer, UI/UX designer, and network engineer blending creativity and logic to build stunning, functional solutions.
+      <div class="text-center md:text-left flex-1">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Hi, I'm <span class="gradient-text">Morris Muchiri</span></h1>
+        <p class="text-gray-300 text-lg max-w-xl mb-6">
+          A versatile <span class="text-blue-400 font-semibold">Software Developer</span>, 
+          <span class="text-green-400 font-semibold">Graphic Designer</span>, 
+          <span class="text-purple-400 font-semibold">UI/UX Designer</span>, and 
+          <span class="text-yellow-400 font-semibold">Network Engineer</span>, blending creativity and logic to build stunning, functional solutions.
         </p>
+
+        <!-- Social Links -->
+        <div class="flex justify-center md:justify-start space-x-6 mb-6">
+          <a href="https://github.com/trippiieeM" target="_blank" aria-label="GitHub" class="text-gray-400 hover:text-blue-400 transition-colors text-xl">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn" class="text-gray-400 hover:text-blue-400 transition-colors text-xl">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://dribbble.com/yourusername" target="_blank" aria-label="Dribbble" class="text-gray-400 hover:text-blue-400 transition-colors text-xl">
+            <i class="fab fa-dribbble"></i>
+          </a>
+          <a href="https://twitter.com/yourusername" target="_blank" aria-label="Twitter" class="text-gray-400 hover:text-blue-400 transition-colors text-xl">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+        
+        <!-- Call to Action -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="projects.html" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
+            View My Work
+          </a>
+          <a href="contact.html" class="bg-transparent border-2 border-blue-500 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
+            Get In Touch
+          </a>
+        </div>
       </div>
     </section>
 
     <!-- About Section -->
-    <section class="bg-gradient-to-b from-gray-900 to-gray-800 rounded-xl shadow-lg p-8">
+    <section class="bg-gray-800 rounded-xl shadow-lg p-8 mb-16 fade-in">
       <h2 class="text-3xl font-bold mb-6 border-b-4 border-blue-500 inline-block">About Me</h2>
-      <p class="text-gray-300 leading-relaxed text-lg max-w-3xl">
-        With a passion for user-centric design and robust coding practices, I build Android apps,create stunning graphic Designs, design UI/UX interfaces, develop web apps, and configure networks. My toolkit includes Kotlin, Java, Python, HTML/CSS, SQL, Figma, and Adobe Creative Suite. Whether it’s a farmer’s market AI app or a corporate fiber network, I deliver practical, polished work.
-      </p>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div>
+          <p class="text-gray-300 leading-relaxed text-lg">
+            With a passion for user-centric design and robust coding practices, I create solutions that bridge design and technology. 
+            My work spans <span class="text-blue-400 font-medium">Android app development</span>, 
+            <span class="text-green-400 font-medium">graphic design</span>, 
+            <span class="text-purple-400 font-medium">UI/UX design</span>, 
+            <span class="text-yellow-400 font-medium">web applications</span>, and 
+            <span class="text-red-400 font-medium">network configuration</span>.
+          </p>
+          <p class="text-gray-300 leading-relaxed mt-4">
+            My toolkit includes <strong class="text-blue-400">JavaScript (React Native, React)</strong>, 
+            <strong class="text-blue-400">Flutter</strong>, 
+            <strong class="text-green-400">Python</strong>, 
+            <strong class="text-yellow-400">HTML/CSS</strong>, 
+            <strong class="text-purple-400">SQL</strong>, 
+            <strong class="text-pink-400">Figma</strong>, and 
+            <strong class="text-red-400">Adobe Creative Suite</strong>.  
+          </p>
+        </div>
+        <div>
+          <p class="text-gray-300 leading-relaxed">
+            Whether I'm developing a farmer's market AI application or setting up a corporate fiber network, 
+            I deliver practical, polished, and impactful work that solves real-world problems.
+          </p>
+          <p class="text-gray-300 leading-relaxed mt-4">
+            I thrive in collaborative environments where I can contribute my diverse skill set to create 
+            comprehensive solutions that address both technical requirements and user experience.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Overview -->
+    <section class="mb-16 fade-in">
+      <h2 class="text-3xl font-bold mb-8 text-center">My Expertise</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Development -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg floating-card border-l-4 border-blue-500">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-code text-blue-400 text-2xl mr-3"></i>
+            <h3 class="text-xl font-semibold">Development</h3>
+          </div>
+          <p class="text-gray-300 text-sm">Building robust applications with modern technologies and best practices.</p>
+          <ul class="mt-3 text-gray-400 text-sm space-y-1">
+            <li><i class="fas fa-check text-blue-400 mr-2"></i> Mobile Apps</li>
+            <li><i class="fas fa-check text-blue-400 mr-2"></i> Web Applications</li>
+            <li><i class="fas fa-check text-blue-400 mr-2"></i> Backend Systems</li>
+          </ul>
+        </div>
+        
+        <!-- Design -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg floating-card border-l-4 border-green-500">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-palette text-green-400 text-2xl mr-3"></i>
+            <h3 class="text-xl font-semibold">Design</h3>
+          </div>
+          <p class="text-gray-300 text-sm">Creating visually appealing and user-friendly interfaces and graphics.</p>
+          <ul class="mt-3 text-gray-400 text-sm space-y-1">
+            <li><i class="fas fa-check text-green-400 mr-2"></i> UI/UX Design</li>
+            <li><i class="fas fa-check text-green-400 mr-2"></i> Graphic Design</li>
+            <li><i class="fas fa-check text-green-400 mr-2"></i> Brand Identity</li>
+          </ul>
+        </div>
+        
+        <!-- Networking -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg floating-card border-l-4 border-yellow-500">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-network-wired text-yellow-400 text-2xl mr-3"></i>
+            <h3 class="text-xl font-semibold">Networking</h3>
+          </div>
+          <p class="text-gray-300 text-sm">Designing and implementing reliable network infrastructures.</p>
+          <ul class="mt-3 text-gray-400 text-sm space-y-1">
+            <li><i class="fas fa-check text-yellow-400 mr-2"></i> Fiber Networks</li>
+            <li><i class="fas fa-check text-yellow-400 mr-2"></i> Router Configuration</li>
+            <li><i class="fas fa-check text-yellow-400 mr-2"></i> Troubleshooting</li>
+          </ul>
+        </div>
+        
+        <!-- Problem Solving -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg floating-card border-l-4 border-purple-500">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-lightbulb text-purple-400 text-2xl mr-3"></i>
+            <h3 class="text-xl font-semibold">Problem Solving</h3>
+          </div>
+          <p class="text-gray-300 text-sm">Analyzing challenges and developing effective, innovative solutions.</p>
+          <ul class="mt-3 text-gray-400 text-sm space-y-1">
+            <li><i class="fas fa-check text-purple-400 mr-2"></i> Analytical Thinking</li>
+            <li><i class="fas fa-check text-purple-400 mr-2"></i> Creative Solutions</li>
+            <li><i class="fas fa-check text-purple-400 mr-2"></i> Technical Research</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophy & Approach -->
+    <section class="bg-gradient-to-r from-blue-900 to-purple-900 rounded-xl shadow-lg p-8 mb-16 fade-in">
+      <h2 class="text-3xl font-bold mb-6 text-center">My Philosophy</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="text-center p-4">
+          <div class="bg-blue-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-users text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">User-Centered</h3>
+          <p class="text-gray-300">I prioritize the end-user experience in every project, ensuring solutions are intuitive and accessible.</p>
+        </div>
+        
+        <div class="text-center p-4">
+          <div class="bg-green-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-code-branch text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Clean & Efficient</h3>
+          <p class="text-gray-300">I write maintainable code and create designs that are both beautiful and functional.</p>
+        </div>
+        
+        <div class="text-center p-4">
+          <div class="bg-purple-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-rocket text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Innovative Solutions</h3>
+          <p class="text-gray-300">I leverage the latest technologies and creative approaches to solve complex problems.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fun Facts -->
+    <section class="mb-16 fade-in">
+      <h2 class="text-3xl font-bold mb-8 text-center">Beyond Work</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-gray-800 p-6 rounded-xl text-center">
+          <i class="fas fa-mug-hot text-blue-400 text-3xl mb-4"></i>
+          <h3 class="text-lg font-semibold mb-2">Coffee Enthusiast</h3>
+          <p class="text-gray-400 text-sm">Fueled by quality coffee while coding and designing</p>
+        </div>
+        
+        <div class="bg-gray-800 p-6 rounded-xl text-center">
+          <i class="fas fa-book-reader text-green-400 text-3xl mb-4"></i>
+          <h3 class="text-lg font-semibold mb-2">Continuous Learner</h3>
+          <p class="text-gray-400 text-sm">Always exploring new technologies and design trends</p>
+        </div>
+        
+        <div class="bg-gray-800 p-6 rounded-xl text-center">
+          <i class="fas fa-hiking text-yellow-400 text-3xl mb-4"></i>
+          <h3 class="text-lg font-semibold mb-2">Nature Explorer</h3>
+          <p class="text-gray-400 text-sm">Finding inspiration in outdoor adventures</p>
+        </div>
+        
+        <div class="bg-gray-800 p-6 rounded-xl text-center">
+          <i class="fas fa-music text-purple-400 text-3xl mb-4"></i>
+          <h3 class="text-lg font-semibold mb-2">Music Lover</h3>
+          <p class="text-gray-400 text-sm">Curating playlists for different coding moods</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="text-center py-12 bg-gray-800 rounded-2xl fade-in">
+      <h2 class="text-2xl font-bold text-blue-400 mb-4">Let's Create Something Amazing Together</h2>
+      <p class="text-gray-300 mb-6 max-w-2xl mx-auto">I'm always excited to take on new challenges and collaborate on innovative projects.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="projects.html" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors inline-block">
+          View My Projects
+        </a>
+        <a href="contact.html" class="bg-transparent border-2 border-blue-500 hover:bg-blue-500 text-white font-semibold py-3 px-8 rounded-lg transition-colors inline-block">
+          Get In Touch
+        </a>
+      </div>
     </section>
   </main>
 
@@ -58,5 +284,21 @@
     © <script>document.write(new Date().getFullYear())</script> Morris Muchiri. All rights reserved.
   </footer>
 
+  <!-- Animation Script -->
+  <script>
+    // Fade-in animation for elements
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeElements.forEach(element => {
+      fadeObserver.observe(element);
+    });
+  </script>
 </body>
 </html>
